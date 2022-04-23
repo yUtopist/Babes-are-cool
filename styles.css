@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html, * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+body {
+    --color-lightest: #f7d1cd;
+    --color-light: #e8c2ca;
+    --color-medium: #d1b3c4;
+    --color-dark: #b392ac;
+    --color-darkest: #735d78;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--color-darkest);
+}
+
+main {
+    width: 800px;
+    min-height: 100vh;
+
+    background-color: #DFCBFF;
+}
+
+header {
+    padding: 0.5rem 0.5rem;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+
+    background-color: red;
+}
+
+/* SUBMIT POPUP STYLES START */
+#submit-container {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#submit-form {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: #DFCBFF;
+
+    transition: .2s;
+    animation-name: pop-up;
+    animation-duration: .2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes pop-up {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#submit-lable-title, #submit-lable-description {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #32175a;
+}
+
+#submit-form>label {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#submit-input-title, #submit-input-description {
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #32175a;
+    background-color: #E6E6FA;
+}
+
+#submit-input-description {
+    resize: none;
+}
+
+#submit-buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+#submit-buttons-container>button {
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background-color: #E6E6FA;
+}
+
+#submit-buttons-container>button:hover {
+    background-color: #f5dcff;
+}
+
+#submit-buttons-container>button:active {
+    background-color: #dec3e9;
+}
+
+/* SUBMIT POPUP STYLES ENDS */
+
+#header-search, #header-submit {
+    height: 1.5rem;
+}
+
+#header-submit {
+    padding: .5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list {
+    margin: 30px 0;
+}
+
+.task {
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+    background-color: #E6E6FA;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+.completed {
+    opacity: .7;
+}
+
+.completed .task-title {
+    text-decoration: line-through;
+}
+
+.task:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.task-content {
+    padding: 5px;
+}
+
+.task-title {
+    font-weight: 500;
+    font-size: 14pt;
+    color: #522D8A;
+}
+
+.task-desc {
+    font-weight: 300;
+    font-size: 12pt;
+    color: #522D8A;
+    margin-top: 3px;
+}
+
+.task-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.task:hover .task-controls>button {
+    opacity: 1;
+}
+
+.task-controls>button {
+    width: max-content;
+    text-transform: uppercase;
+    margin: 2px;
+    background: none;
+    color: #522D8A;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.task-controls>button:hover {
+    text-decoration: underline;
+}
+
+.task-content {
+    width: 100%;
+}

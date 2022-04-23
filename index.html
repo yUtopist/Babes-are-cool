@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Twitter Clone</title>
+</head>
+
+<body>
+    <div id="submit-container">
+        <div method="GET" id="submit-form">
+            <label for="submit-input-title">
+                <h6 id="submit-lable-title">Title</h6>
+                <input id="submit-input-title" type="text">
+            </label>
+            <label for="submit-input-description">
+                <h6 id="submit-lable-description">Task Description</h6>
+                <textarea name="" id="submit-input-description" cols="50" rows="2"></textarea>
+            </label>
+            <span id="submit-buttons-container">
+                <button id="submit-button-add">Add Task</button>
+                <button id="submit-button-clear">Clear</button>
+                <button id="submit-button-close">Cancel</button>
+            </span>
+        </div>
+    </div>
+    <main>
+        <header>
+            <button id="header-button-submit">Submit Task</button>
+            <input id="header-input-search" type="text">
+        </header>
+        <div id="task-list"></div>
+    </main>
+    <script src="./components/TaskElement.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
